@@ -1,0 +1,91 @@
+body {
+    display: flex;
+    justify-content: center;
+
+    background-color: #e6e6e6;
+}
+
+/* Resume */
+
+.resume {
+    background-color: white;
+
+    max-width: 896px;
+    margin: 32px;
+    padding: 32px;
+    box-shadow: 0 0 5px darkgray;
+}
+
+.resume > :not( :last-child ) {
+    margin-bottom: 16px;
+}
+
+.resume h2 {
+    text-transform: uppercase;
+}
+
+/* GENERAL INFO */
+
+.info-container {
+    text-align: center;
+}
+
+.info-container > h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.user-info {
+    display: flex;
+    justify-content: center;
+}
+
+.user-info :not( :last-child )::after {
+    content: '|';
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+/* EDUCATION */
+
+hr {
+    margin: 0;
+}
+
+.education-point {
+    display: flex;
+    justify-content: space-between;
+}
+
+.educ-point-container :nth-child(2) {
+    text-align: right;
+} 
+
+/* SKILLS */
+
+.skill-point {
+    display: flex;
+}
+
+.skill-point h3 {
+    margin-right: 0.5rem;
+}
+
+/* EXPERIENCE */
+
+.exp-point-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.exp-point-container p {
+    text-align: right;
+}
+
+.exp-point-content {
+    list-style: square outside;
+    margin-left: 2rem;
+    margin-top: 0.25rem;
+}
+
+
