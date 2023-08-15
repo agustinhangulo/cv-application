@@ -1,9 +1,12 @@
 
-function Experience() {
+function Experience({editable}) {
   return (
     <>
       <div className="experience">
-        <h2>Experience</h2>
+        <div className="content-header">
+          <h2>Experience</h2>
+          {editable && <button>Edit</button>}
+        </div>
         <hr />
         <div className="experience-content">
 

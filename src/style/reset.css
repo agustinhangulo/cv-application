@@ -18,7 +18,6 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 	vertical-align: baseline;
 	background: transparent;
 	box-sizing: border-box;  /* This is my own addition */
-    font-family: 'Times New Roman', Times, serif;
 }
 body {
 	line-height: 1;

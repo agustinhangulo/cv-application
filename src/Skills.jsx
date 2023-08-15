@@ -1,9 +1,12 @@
 
-function Skills() {
+function Skills({editable}) {
   return (
     <>
       <div className="skills">
-        <h2>Skills</h2>
+        <div className="content-header">
+          <h2>Skills</h2>
+          {editable && <button>Edit</button>}
+        </div>
         <hr />
         <div className="skills-content">
 

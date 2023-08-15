@@ -3,14 +3,15 @@ import Education from './Education';
 import Skills from './Skills';
 import Experience from './Experience';
 
-function Resume() {
+
+function Resume({editable}) {
   return (
     <>
       <div className="resume">
-        <Info></Info>
-        <Education></Education>
-        <Skills></Skills>
-        <Experience></Experience>
+        <Info editable={editable} ></Info>
+        <Education editable={editable}></Education>
+        <Skills editable={editable}></Skills>
+        <Experience editable={editable}></Experience>
       </div>
     </>
   );

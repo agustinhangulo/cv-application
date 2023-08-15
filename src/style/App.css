@@ -1,3 +1,8 @@
+:root {
+    --accent: #A4373A;
+    --accent-dark: hsl(358, 50%, 33%);
+}
+
 body {
     display: flex;
     justify-content: center;
@@ -5,7 +10,44 @@ body {
     background-color: #e6e6e6;
 }
 
-/* Resume */
+/* CONTROLS */
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+
+    margin: 32px;
+}
+
+.controls > button {
+    padding: 16px;
+    box-shadow: 0 0 2px darkgray;
+    font-size: 1.5rem;
+}
+
+button {
+    background-color: var(--accent);
+    color: white;
+    
+    padding: 4px 12px 4px 12px;
+    border: 0;
+    border-radius: 8px;
+    
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+button:hover, button:focus-visible {
+    background-color: var(--accent-dark);
+}
+
+button:focus-visible {
+    border: 3px white solid;
+}
+
+/* RESUME */
 
 .resume {
     background-color: white;
@@ -14,6 +56,8 @@ body {
     margin: 32px;
     padding: 32px;
     box-shadow: 0 0 5px darkgray;
+
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .resume > :not( :last-child ) {
@@ -24,13 +68,31 @@ body {
     text-transform: uppercase;
 }
 
+.content-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.content-header > button {
+    margin-bottom: 4px;
+}
+
+hr {
+    margin: 0;
+}
+
 /* GENERAL INFO */
 
-.info-container {
+.info {
     text-align: center;
 }
 
-.info-container > h1 {
+.info button {
+    margin-top: 8px;
+}
+
+.info > h1 {
     font-size: 1.5rem;
     font-weight: bold;
 }
@@ -47,10 +109,6 @@ body {
 }
 
 /* EDUCATION */
-
-hr {
-    margin: 0;
-}
 
 .education-point {
     display: flex;
@@ -88,4 +146,49 @@ hr {
     margin-top: 0.25rem;
 }
 
+/* MODAL */
 
+.modal-overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background-color: rgba(0, 0, 0, 0.5);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    
+    width: 100%;
+    height: 100%;
+    
+}
+
+.modal-content {
+    position: relative;
+
+    background-color: white;
+    padding: 32px;
+    border-radius: 8px;
+}
+
+.modal-close {
+    width: 100%;
+}
+
+
+/* FORM/INPUT */
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
