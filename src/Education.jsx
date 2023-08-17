@@ -1,30 +1,46 @@
+import Degree from "./Degree";
+import { useState } from "react";
+import { v4 as uuid } from "uuid";
+
 
 function Education({editable}) {
+
+  const [degreesList, setDegreesList] = useState([]);
+
+  const addDegree = () => {
+    const newDegree = {
+      id: uuid(),
+      university: 'University',
+      graduation: 'Month XX',
+      gpa: 'X.XX',
+      type: 'Degree of XX'
+    };
+    setDegreesList([...degreesList, newDegree]);
+  };
+
+  const removeDegree = (event) => {
+    setDegreesList(degreesList.filter( (degree) => degree.id !== event.target.id));
+
+  }
+
   return (
     <>
       <div className="education">
 
           <div className="content-header">
             <h2>Education</h2>
-            {editable && <button>Edit</button>}
           </div>
 
           <hr />
           <div className="education-content">
 
-            {/* TODO: Consider making a component for each point */}
+            { degreesList.map( (degree) => {
+              return (
+                <Degree editable={editable} degree={degree} removeDegree={removeDegree} key={degree.id} ></Degree>
+              );
+            })}
 
-            <div className="education-point">
-              <div className="educ-point-container">
-                <h3>University</h3>
-                <p>Graduation: Month XX</p>
-              </div>
-              <div className="educ-point-container">
-                <p>Degree of XX</p>
-                <p>GPA: X.XX</p>
-              </div>
-            </div>
-
+            {editable && <button onClick={addDegree} >Add degree</button>}
           </div>
       </div>
     </>

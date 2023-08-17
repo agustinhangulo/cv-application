@@ -82,11 +82,17 @@ hr {
     margin: 0;
 }
 
-
 /* Whenever the button is an only child (no other elements)
    use a margin to keep it away from section header */
-.skills-content button:only-child {
+.skills-content button:only-child,
+.education-content button:only-child {
     margin-top: 8px;
+}
+
+.buttons {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 10px;
 }
 
 /* GENERAL INFO */
@@ -117,12 +123,16 @@ hr {
 
 /* EDUCATION */
 
-.education-point {
+.degree-content {
+    margin-bottom: 4px;
+}
+
+.degree-container {
     display: flex;
     justify-content: space-between;
 }
 
-.educ-point-container :nth-child(2) {
+.degree-container :nth-child(2) {
     text-align: right;
 } 
 
@@ -139,12 +149,6 @@ hr {
 
 .skill-content h3::after  {
     content: ':';
-}
-
-.skill > .buttons {
-    display: flex;
-    gap: 8px;
-    margin-bottom: 10px;
 }
 
 /* EXPERIENCE */
