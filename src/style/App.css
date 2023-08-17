@@ -82,13 +82,20 @@ hr {
     margin: 0;
 }
 
+
+/* Whenever the button is an only child (no other elements)
+   use a margin to keep it away from section header */
+.skills-content button:only-child {
+    margin-top: 8px;
+}
+
 /* GENERAL INFO */
 
 .info {
     text-align: center;
 }
 
-.info button {
+.info > button {
     margin-top: 8px;
 }
 
@@ -121,12 +128,23 @@ hr {
 
 /* SKILLS */
 
-.skill-point {
+.skill-content {
     display: flex;
+    margin-bottom: 4px;
 }
 
-.skill-point h3 {
+.skill-content h3 {
     margin-right: 0.5rem;
+}
+
+.skill-content h3::after  {
+    content: ':';
+}
+
+.skill > .buttons {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 10px;
 }
 
 /* EXPERIENCE */
@@ -184,6 +202,8 @@ form {
     flex-direction: column;
     gap: 16px;
 
+    margin-bottom: 8px;
+    
     font-family: Arial, Helvetica, sans-serif;
 }
 
